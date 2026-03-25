@@ -12,29 +12,39 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:'Poppins',sans-serif;
-  background:linear-gradient(135deg,#0ea5e9,#9333ea);
-  color:#0f172a;
-  overflow-x:hidden;
+  background:linear-gradient(135deg,#0f172a,#d4af37);
+  color:#fff;
 }
 
 header{
   text-align:center;
-  padding:80px 20px;
-  color:#fff;
-  animation:fadeDown 1s ease;
+  padding:60px 20px 40px;
 }
 
-header h1{font-size:50px;font-weight:700}
-header p{opacity:.9}
+.profile-img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #d4af37;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  animation:zoomIn 1s ease;
+}
+
+header h1{
+  font-size:42px;
+  margin-top:15px;
+}
+
+header p{opacity:.85}
 
 section{
-  padding:70px 10%;
-  animation:fadeUp 1s ease;
+  padding:60px 10%;
 }
 
 h2{
   margin-bottom:25px;
-  color:#fff;
+  color:#d4af37;
 }
 
 .grid{
@@ -44,10 +54,11 @@ h2{
 }
 
 .card{
-  background:#ffffff;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
   padding:25px;
   border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
   transition:.4s;
 }
 
@@ -64,28 +75,24 @@ h2{
 
 .contact a{
   font-size:26px;
-  color:#fff;
+  color:#d4af37;
   transition:.3s;
 }
 
 .contact a:hover{
   transform:scale(1.2);
+  color:#fff;
 }
 
 footer{
   text-align:center;
   padding:30px;
-  color:#fff;
+  color:#aaa;
 }
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(40px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-@keyframes fadeDown{
-  from{opacity:0;transform:translateY(-40px)}
-  to{opacity:1;transform:translateY(0)}
+@keyframes zoomIn{
+  from{transform:scale(0.5);opacity:0}
+  to{transform:scale(1);opacity:1}
 }
 
 </style>
@@ -93,6 +100,7 @@ footer{
 <body>
 
 <header>
+  <img src="profile.jpg" alt="Profile" class="profile-img">
   <h1>Muhammad Ahmad</h1>
   <p>Metaverse | VR/AR | Blockchain | Game Development Expert</p>
 </header>
@@ -119,7 +127,7 @@ footer{
 <section>
   <h2>Experience</h2>
   <div class="grid">
-    <div class="card"><b>Xynova</b><br>Co-Founder - Leading next-gen digital platforms</div>
+    <div class="card"><b>Xynova</b><br>Co-Founder</div>
     <div class="card"><b>Markaba Studios</b><br>Technical Lead</div>
     <div class="card"><b>Meta Lens</b><br>Project Manager</div>
     <div class="card"><b>HNI UAE & KSA</b><br>VR Lead Developer</div>
